@@ -24,7 +24,7 @@ stadt = [
 
 
 def main():
-    print(f"{"":15} | {"area":>20} | {"district":>15} | {"code":>0}")
+    print(f"{"":15} | {"":>20} | {"district":>15} | {"code":>0}")
     for name, (area, code), district, _, in stadt:
         if code < 50:
             print(f"{name:15} | {area:20} | {district:15} | {code:3}")
