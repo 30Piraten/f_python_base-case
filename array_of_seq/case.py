@@ -6,4 +6,4 @@ names = [
 for n in names:
     match n:
         case [name, _, _, *rest] if n is not None:
-            print(f"{name:4} | {rest}")
+            print(f"{name} | {rest}")
