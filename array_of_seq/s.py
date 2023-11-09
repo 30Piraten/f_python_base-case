@@ -33,7 +33,7 @@ buch = """
     208       5      paperback      br       $12.75
     012       10     ebook          fr       $22.45
     895       9      ebook          en       $45.95
-    892       2      paperback      it       $28.00   
+    892       2      paperback      it       $28.00
     """
 
 # We can name our slices, instead of hardcoding it:
@@ -50,4 +50,4 @@ buch_items = buch.split("\n")[2:]
 # Iterate through the items
 for b in buch_items:
     # Trigger:
-    print(b[SERIAL_NUMBER], b[QUANTITY], b[PRICE])
+    print(b[SERIAL_NUMBER], b[QUANTITY], b[PRICE], b[LANGUAGE])
