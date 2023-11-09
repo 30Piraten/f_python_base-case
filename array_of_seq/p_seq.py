@@ -14,16 +14,18 @@ frucht = [
 def nested_tuples():
     for f in frucht:
         match f:
-            # adding specific type information (str and float),
-            # we could rewrite this:
-            # In the context of a pattern, the expr str(name) and
-            # float(preis_x), etc., the syntax performs a runtime
-            # check which matches, 0 as the first item in the sequence
-            # --> name, 1 -> farbe, and 3 to the floats(preis_x, ...)
+            # used formally:
+            # case [name, farbe, _, (preis_x, preis_y)] if preis_y <= 3:
+
+            # ---------------------------------#
+            # we could rewrite this by adding specific type
+            # information (str and float). In the context of
+            # a pattern, the str(name) and float(preis_x, ...),
+            # syntax performs a runtime check which matches,
+            # 0 as the first item in the sequence --> name, 1 ->
+            # farbe, and 3 to the floats(preis_x, ...)
             case [str(name), str(farbe), _, (float(preis_x), float(preis_y))] if preis_y <= 3:
 
-                # Or used formally:
-                # case [name, farbe, _, (preis_x, preis_y)] if preis_y <= 3:
                 print(f"{name:10} | {farbe:7} | {
                       preis_x:3.2f} | {preis_y:3.2f}")
 
